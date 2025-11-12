@@ -1,0 +1,21 @@
+# Default: use LF for everything
+* text=auto eol=lf
+
+# Windows-specific files can use CRLF if needed
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Keep shell scripts, Dockerfiles, YAML, Python etc. always LF
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+Dockerfile text eol=lf
+
+# Keep images and binaries untouched
+*.jpg binary
+*.png binary
+*.gif binary
+*.pdf binary
+*.exe binary
+*.dll binary
