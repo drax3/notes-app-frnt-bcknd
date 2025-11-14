@@ -31,4 +31,3 @@ RUN chown -R appuser:appuser /backend
 USER appuser
 
 ENTRYPOINT ["/backend/entrypoint.sh"]
-CMD ["tail", "-f", "/dev/null"]

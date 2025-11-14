@@ -8,10 +8,16 @@ services:
       - ./backend/code:/backend/code
     env_file:
       - ./backend/.env.dev
-#    environment:
-#      - POSTGRES_HOST=db
-#    depends_on:
-#      - db
+    depends_on:
+      - db
     ports:
       - "8000:8000"
+
+  db:
+    image: postgres:17.5
+    env_file:
+      - ./backend/.env.dev
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 volumes:
+  pgdata:
